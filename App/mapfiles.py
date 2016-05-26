@@ -2,7 +2,7 @@ import os
 import re
 
 # Global Config
-DATA_DIR = "../gitignore"
+DATA_DIR = "gitignore"
 FILE_DOT_GITIGNORE_REGEX = "^.*\.gitignore$"
 """
 	Class to access data
@@ -20,16 +20,15 @@ class DataStore(object):
 	def load_files(self):
 		print("loading files ...")
 		data = {}
-		# os.chdir(DATA_DIR)
 		files_in_dir = os.listdir(DATA_DIR)
 		for f in files_in_dir:
 			# safegaurd to load only *.md files
 			if re.match(FILE_DOT_GITIGNORE_REGEX,f) is not None:
 				# Read each file and save it's content in a dict with key as filename and value as content
 				with open(DATA_DIR+"/"+f) as fp:
-						key = f.replace(".md","")
+						key = f.replace(".gitignore","")
 						value = fp.read()
-						data[key] = value
+						data[key.lower()] = value
 		self.data = data
 
 		if self.data == data:
