@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>.gitignore</title>
+		<link rel="stylesheet" href={{ url_for('static', filename='main.min.css') }}>
+	</head>
+	<body>
+		<div class="container">
+			<div class="logo">
+				<a href="/">gitignore.xyz</a>
+				<span>Fetch gitignore files with curl</span>
+			</div>
+			<div class="board">
+				<p align="center">
+					curl https://gitignore.xyz/{LANGUAGE_NAME} > .gitignore
+				</p>
+			</div>
+			<div class="files">
+				<ul>
+					{% for fp in data %}
+						<li><a href={{ url_for("fetch_gitignore_file", file_name=fp) }} target="_blank">{{ fp }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="footer">
+				<ul>
+					<li><a href="https://snehesh.me">@Snehesht</a></li>
+					<li><a href="https://github.com/snehesht/GitIgnoreApi/">Github</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

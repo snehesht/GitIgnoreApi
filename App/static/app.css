@@ -1,0 +1,72 @@
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+ul {
+	columns: 4;
+	-webkit-columns: 4;
+	-moz-columns: 4;
+}
+li {
+	list-style-type: none;
+}
+li > a {
+	padding: 3px;
+	text-decoration: none;
+	color: black;
+	font-family: monospace;
+	font-size: 14px;
+}
+li > a:hover {
+	color: blue;
+	background: #EEEEEE;
+}
+.about > p.intro > a {
+	text-decoration: none;
+}
+.about >  h2 > a {
+	color: #FF3333;
+	font-family: monospace;
+	font-weight: 400;
+	font-size: 24px;
+}
+.about > span {
+	color: #11EE11;
+	font-family: monospace;
+	font-size: 18px;
+}
+.about > .intro {
+	/*padding: 10px 0px 0px 150px;*/
+	align-self: center;
+}
+.about > .usage {
+	padding: 25px;
+	background-color: #DDDDDD;
+	color: #000000;
+	font-family: monospace;
+	font-size: 18px;
+}
+.packages > p {
+	color: red;
+	font-size: 20px;
+	font-family: monospace;
+}
+a {
+	text-decoration: none;
+}
+.footer {
+	/*padding: 100px 0px 0px 0px;*/
+	width: 400px;
+	margin: 0 auto;
+	font-family: monospace;
+	font-size: 12px;
+}
+.footer > p > a {
+	color: blue;
+	padding: 5px 50px 5px 50px;
+}
+.logo {
+	border: 1px solid red;
+	max-width: 16%;
+	padding: 5px;
+}

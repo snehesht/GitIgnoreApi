@@ -1,8 +1,8 @@
 from flask import Flask
-from mapfiles import DataStore
+from . import mapfiles
 
 api_app = Flask(__name__)
-ds = DataStore()
+ds = mapfiles.DataStore()
 data = ds.get_data()
 
-from server import *
+from . import views
